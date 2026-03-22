@@ -1,0 +1,39 @@
+<div class="page-shell">
+  <header class="glass-panel app-shell">
+    <div class="brand-block">
+      <div class="brand-mark">BV</div>
+      <div>
+        <p class="eyebrow">Angular reader portal</p>
+        <h1 class="brand-title">BookVerse Portal</h1>
+      </div>
+    </div>
+
+    <nav class="menu-row">
+      <a class="menu-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a class="menu-link" routerLink="/catalog" routerLinkActive="active">Catalog</a>
+      <a class="menu-link" routerLink="/categories" routerLinkActive="active">Categories</a>
+      <a class="menu-link" routerLink="/wishlist" routerLinkActive="active">Wishlist</a>
+      <a class="menu-link" routerLink="/downloads" routerLinkActive="active">Downloads</a>
+      <a class="menu-link" routerLink="/request-book" routerLinkActive="active">Request Book</a>
+      <a class="menu-link" routerLink="/login" routerLinkActive="active">
+        {{ auth.isAuthenticated() ? 'Account' : 'Login' }}
+      </a>
+    </nav>
+
+    <div class="status-block">
+      <div>
+        <p class="eyebrow">Current reader</p>
+        <strong>{{ currentReaderLabel() }}</strong>
+      </div>
+      <div class="status-metrics">
+        <span>{{ portal.wishlistBooks().length }} wishlist</span>
+        <span>{{ portal.downloadedBooks().length }} downloads</span>
+      </div>
+      @if (auth.isAuthenticated()) {
+        <button class="btn" type="button" (click)="logout()">Logout</button>
+      }
+    </div>
+  </header>
+
+  <router-outlet></router-outlet>
+</div>
