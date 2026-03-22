@@ -12,12 +12,9 @@ import { PortalStateService } from '../core/services/portal-state.service';
     <section class="section glass-panel">
       <div class="hero-grid">
         <div>
-          <p class="eyebrow">Multipage Angular experience</p>
+          <p class="eyebrow">Top book reader experience</p>
           <h2 class="display-title">Discover, track, and buy books in a portal built for serious readers.</h2>
-          <p class="copy">
-            This version is routed with Angular pages and a real navigation system. Readers can browse categories,
-            save wishlists, track downloads, explore detail pages, and send missing-book requests.
-          </p>
+          <br>
 
           <div class="button-row">
             <a class="btn primary" routerLink="/catalog">Browse catalog</a>
@@ -42,8 +39,7 @@ import { PortalStateService } from '../core/services/portal-state.service';
         </div>
 
         <div class="feature-card">
-          <p class="eyebrow">New features added</p>
-          <h3 class="section-title" style="font-size: 2.1rem;">Built beyond the first single page</h3>
+          <p class="eyebrow">New features added</p><br>
           <div class="list-stack">
             <div class="list-item">
               <strong>Book detail routes</strong>
