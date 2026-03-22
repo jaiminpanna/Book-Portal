@@ -10,13 +10,13 @@ import { RequestBookPageComponent } from './pages/request-book.page';
 import { WishlistPageComponent } from './pages/wishlist.page';
 
 export const routes: Routes = [
-  { path: '', component: HomePageComponent, title: 'BookVerse Portal' },
-  { path: 'catalog', component: CatalogPageComponent, title: 'Catalog | BookVerse Portal' },
-  { path: 'categories', component: CategoriesPageComponent, title: 'Categories | BookVerse Portal' },
-  { path: 'wishlist', component: WishlistPageComponent, canActivate: [authGuard], title: 'Wishlist | BookVerse Portal' },
-  { path: 'downloads', component: DownloadsPageComponent, title: 'Downloads | BookVerse Portal' },
-  { path: 'request-book', component: RequestBookPageComponent, title: 'Request a Book | BookVerse Portal' },
-  { path: 'login', component: LoginPageComponent, title: 'Login | BookVerse Portal' },
-  { path: 'books/:id', component: BookDetailPageComponent, title: 'Book Details | BookVerse Portal' },
+  { path: '', component: HomePageComponent, title: 'Book Portal' },
+  { path: 'catalog', component: CatalogPageComponent, title: 'Catalog | Book Portal' },
+  { path: 'categories', component: CategoriesPageComponent, title: 'Categories | Book Portal' },
+  { path: 'wishlist', component: WishlistPageComponent, canActivate: [authGuard], title: 'Wishlist | Book Portal' },
+  { path: 'downloads', component: DownloadsPageComponent, title: 'Downloads | Book Portal' },
+  { path: 'request-book', component: RequestBookPageComponent, title: 'Request a Book | Book Portal' },
+  { path: 'login', component: LoginPageComponent, title: 'Login | Book Portal' },
+  { path: 'books/:id', component: BookDetailPageComponent, title: 'Book Details | Book Portal' },
   { path: '**', redirectTo: '' },
 ];
